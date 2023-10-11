@@ -1,0 +1,110 @@
+import UseEffect from './UseEffect';
+/*function App() {
+  return (
+    <div>
+      <UseEffect/>
+    </div>
+  );
+}
+
+export default App;
+//import { useEffect, useState } from "react";
+/*import React from "react";
+import { useState,useEffect } from "react";
+function App() {
+  const [ c,setCount ] = useState(0);
+  useEffect(()=>{
+    document.title =`count:$(c)`;
+  },[c]);
+  return(
+    <div align="center">
+      <p>count: {c}</p>
+      <button onClick={()=>setCount(c-1)}>Decrement</button>
+      <button onClick={()=>setCount(c+1)}>Increment</button>
+    </div>
+  )
+}
+export default App;*/
+/*import { useState, useEffect } from "react";
+
+function App() {
+  const [isOnline, setIsOnline] = useState(null);
+
+  useEffect(() => {
+    const handleStateChange = ({ isOnline }) => setIsOnline(isOnline);
+
+    const intervalId = setInterval(() => {
+      const randomStatus = Math.random() < 0.5;
+      handleStateChange({ isOnline: randomStatus });
+    }, 1000);
+
+    return () => {
+      clearInterval(intervalId);
+    }
+  }, []);
+  if (isOnline === null) {
+    return 'Loading';
+  }
+  return isOnline ? 'Online' : 'Offline';
+}
+
+export default App;*/
+/*import React from 'react';
+import './App.css';
+import LoginForm from './LoginForm';
+function App() {
+  return (
+    <div className="App">
+      <LoginForm />
+    </div>
+  );
+}
+
+export default App;*/
+/*import React, { useRef } from 'react';
+
+function App() {
+  const inputRef = useRef(null);
+  const onBtnClick = () => inputRef.current.focus();
+  return (
+    <>
+      <input ref={inputRef} />
+      <button onClick={onBtnClick}>Focus on text Input</button>
+    </>
+  );
+}
+
+export default App;*/
+/*import React, { createContext, useContext, useState } from 'react';
+const MyContext = createContext();
+const MyProvider = ({ children }) => {
+  const [count, setCount] = useState(0);
+  const increment = () => {
+    setCount(count + 1);
+  };
+  const decrement = () => {
+    setCount(count - 1);
+  };
+  return (
+    <MyContext.Provider value={{ count, increment, decrement }}>
+      {children}
+    </MyContext.Provider>
+  );
+};
+function App() {
+  const { count, increment, decrement } = useContext(MyContext);
+  return (
+    <div>
+      <h1>Count: {count}</h1>
+      <button onClick={increment}>Increment</button>
+      <button onClick={decrement}>Decrement</button>
+    </div>
+  );
+}
+export default function MainApp() {
+  return (
+    <MyProvider>
+      <App />
+    </MyProvider>
+  );
+}*/
