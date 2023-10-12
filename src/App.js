@@ -1,5 +1,6 @@
-/*import React, { useState } from "react";
-import "./App.css";
+/*import { createRoot } from 'react-dom/client';
+import React, { useState } from "react";
+
 import Task from "./Task";
 function App() {
   const [tasks, setTasks] = useState([
@@ -53,7 +54,7 @@ function App() {
   );
 }
 export default App;*/
-import React from 'react';
+/*import React from 'react';
 import Ram from './Ram';
 
 function App() {
@@ -64,5 +65,19 @@ function App() {
   );
 }
 
-export default App;
+export default App;*/
 
+import React from 'react';
+import Greeting from './Greeting';
+import { createRoot } from 'react-dom/client';
+
+function App() {
+  return (
+    <div>
+      <h1>Hello, React!</h1>
+      <Greeting name="John" />
+    </div>
+  );
+}
+
+export default App;
